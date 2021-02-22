@@ -1,0 +1,130 @@
+<!-- Registration page -->
+<!-- -->
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Indie+Flower|Yellowtail|Maven+Pro|Creepster|Dancing+Script|Finger+Paint">
+<title> Registration </title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<style>
+*
+{
+	font-family:Maven Pro;
+	}
+body {
+  background-image: url("bg_blk.jpg");
+ 
+}
+	input[type=text] {
+	width: 60%;
+	height:5%;
+    background-color:#e874f;
+	margin-bottom:5px;
+	align:right;
+	width:400px;
+	height:40px;
+	border-radius:10px;
+
+}
+
+	input[type=email] {
+	width: 60%;
+	height:5%;
+    background-color:#e874f;
+	margin-bottom:5px;
+	align:right;
+	width:400px;
+	height:40px;
+	border-radius:10px;
+	required;
+}
+
+td {
+	align:center;
+	}
+
+input[type=textarea] {
+	width: 60%;
+	height:10%;
+    background-color:#e874f;
+	margin-bottom:5px;
+	width:400px;
+	height:70px;
+	border-radius:10px;
+	}
+
+.lbl {
+	font-size:25px;
+	color:white;
+	align:left
+	width:150px;
+	required
+}
+input[type="submit"]{
+background-color:green;
+color:white;
+border:none;
+border-radius:5px;
+}
+input[type=submit]:hover{
+text-transform:uppercase;
+		font-weight:bold;
+		color:#000000;
+		}
+		input[type="reset"]{
+background-color:red;
+color:white;
+border:none;
+border-radius:5px;
+}
+input[type=reset]:hover{
+text-transform:uppercase;
+		font-weight:bold;
+		color:#000000;
+		background-color:red;
+		}
+</style>
+</head>
+
+<body>
+<center><p style="margin-top:20px; padding:10px; color:white; width:auto; height:65px; font-size:35px"; ><b> Registration Form </b><p></center>
+<div style="background-image:url('bg_blk.jpg'); margin:auto; width:50%; margin-bottom:40px; padding:25px;" >
+	<form action="login.html"><table border="0" align="center";>
+	
+	<tr><td><b class="lbl"> First name  </b> </td><td><input type="text"; align="right"; name="fnm" placeholder="Enter first name"  pattern="([a-z])(?=.*-).{4}" title="Enter characters only" required></td></tr>
+	<tr><td><b class="lbl"; > Middle name </b> </td><td><input type="text"; name="mnm" placeholder="Enter middle name" required> </td></tr>
+	<tr><td><b class="lbl"; > Last name </b> </td><td><input type="text"; name="snm" placeholder="Enter last name" required;> </td></tr>
+	
+	<tr><td><b class="lbl"; > Gender </b> &nbsp </td><td><input type="radio"; name="gen"; value="Male"; >&nbsp;&nbsp;<b style="color:white; font-size:22px";>Male</b> &nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="radio"; name="gen"; value="Female";>&nbsp;&nbsp;<b style="color:white; font-size:22px";>Female</b></td>
+	
+	<tr style="height:20px";></tr>
+	<tr><td><b class="lbl"; > E-mail ID </b> </td><td><input type="email"; name="mail"; placeholder="Enter email" required> </td></tr>
+	<tr><td><b class="lbl"; > Mobile No </b> </td><td><input type="text" name="mob"  placeholder="Enter 10 digit number." pattern="[0-9]{10}" title="Enter 10-digit no" required> </td></tr>
+	
+	<tr style="height:20px";></tr>
+	<tr><td><b class="lbl"; > Address </b></td><td> <input type="textarea"; maxlength="500"; placeholder="Enter address" name="add"; > </td></tr>
+	<tr><td><b class="lbl"; > Remarks </b></td><td> <input type="textarea"; maxlength="600"; placeholder="Enter additional remarks, if any" name="rmk";> </td></tr>
+	
+	<tr style="height:20px";></tr>
+	<tr><td><b class="lbl"; > Username </b></td><td> <input type="text"; name="unm"  placeholder="Enter username" pattern="[a-z]{1,7}" required>  </td></tr>
+	<tr><td><b class="lbl"; > Password </b> </td><td><input type="text"; name="pswd"; placeholder="Enter password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}" title="Must contain at least one upper case letter, lower case letter and a number. Length :8-10" required>  </td></tr>
+	<tr><td><b class="lbl"; > Confirm password&nbsp;&nbsp; </b></td><td> <input type="text"; name="cpswd"; placeholder="confirm your password"  required>  </td></tr>
+	</table>
+	
+	<input type="submit"; class="btn btn-success" value="Register"; style="width:130px;  margin-top:40px; margin-left:250px;";>
+	<input type="reset" value="Clear" class="btn btn-success" style="width:130px;  margin-top:40px; margin-left:90px;";>
+	</form>
+</body>
+</html>
+
+
+<!--
+<input  class="btn btn-success" style="background-color:slateblue; width:130px;  margin-top:40px; margin-left:250px;";> Register </a>
+<input type="submit"; class="btn btn-success"; value="Login";>
+	
+	
+/*<div align="left"; style="display:inline-block; background-color:green; padding:5px; font-family:verdana; width:160px; height:40px; font-size:30px"; > Username </div>*/
+<input style="display:inline-block"; type="text"; name="nm";>
+-->

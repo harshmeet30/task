@@ -1,0 +1,124 @@
+<!-- processing page -->
+<!-- -->
+<!-- -->
+
+<html>
+<head>
+
+<title> Process Audio </title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Indie+Flower|Yellowtail|Maven+Pro|Creepster|Dancing+Script|Finger+Paint">
+
+<style>
+<!-- for img bg -->
+body, html {
+  height: 100%;
+  margin-top: 0;
+  font-family:Maven Pro !important;
+}
+.bg {
+  background-image: url({{ url_for ('static', filename = 'bb.jpg') }});
+  /* Full height */
+  height:100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+<!-- for img bg end -->
+input[type=file]{
+border=none;
+border-radius:5px;
+}
+
+<!-- for input start -->
+td {
+	align:center;
+	}
+
+
+
+.lbl {
+	font-size:25px;
+	color:#000099;
+	align:left
+	width:150px;
+	required
+}
+<!-- for input end -->
+</style>
+</head>
+<body style="font-family:Maven Pro !important;" onload=>
+
+
+<div class="bg" style="padding-top:80px; ";>
+<div style="background-color:white; margin-left:440px; padding-left:70px; padding-top:40px; border-radius:5px; height:460px; width:400px;";>
+
+
+<form action="{{ url_for('f4') }} " method="post" enctype="multipart/form-data">	
+<tr><td style="font-family:Maven Pro;"><b class="lbl"; > Upload audio file: </b> </td><td><input type="file" name="file"> </td></tr>
+
+<input type="submit" class="btn btn-success" value="Process audio" style="background-color:dodgerblue; 
+	margin-top:30px; margin-left:0px; padding-left:20px; color:white; padding-top:5px;
+	width:250px; height:50px; font-size:25px; border-radius:5px; " name="Process audio"; value="Process audio" >
+</form>
+<!--   for submitting mail
+<form action="script">	
+<input type="submit"; class="btn btn-success"; value="Send E-mail"; style="background-color:blue; 
+	margin-top:80px; margin-left:0px;   padding-left:20px; color:white; padding-top:5px; font-family:verdana; 
+	width:250px; height:50px; font-size:25px; border-radius:5px; " ; name="Send E-mail"; value="Send E-mail";>
+</form>
+-->
+<form action="{{ url_for('send') }} " method="post" enctype="multipart/form-data">	
+	<input style="margin-left:1px; margin-top:60px; width:280px;" type="text" name="email" placeholder="Enter Patient's Email" required>
+	
+	
+	
+ <!-- pop-up of mail sent -->
+<input type="submit" class="btn btn-info btn-lg" value="Send E-mail" style="background-color:blue;
+	margin-top:30px; margin-left:0px;   padding-left:20px; color:white; padding-top:5px; width:250px; height:50px; font-size:25px; border-radius:5px; ">
+	<br><br>
+</form>	
+
+<a href="log.html" class="btn btn-success" style="background-color:blue; color:white; padding-top:5px; width:250px; height:50px; font-size:25px; border-radius:5px; ";> Log Out </a>
+  <!-- pop-up -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- pop-up content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Success</h4>
+        </div>
+        <div class="modal-body">
+          <p>E-mail sent successfully!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+       	
+    </div>
+  </div>
+
+ <!-- pop up of mail sent end -->
+
+</div>
+
+
+</div>
+ {% if val %}
+ <script>
+         alert("Email sent"); 
+      </script>
+      {% endif %}
+
+</body>
+</html>
